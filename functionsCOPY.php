@@ -338,7 +338,7 @@ function custom_featured_items_editor ($wp_customize) {
 
 	//What settings/options do you want to be editable?
 	$wp_customize->add_setting( 'fi_small_picture_one' , array ( 
-		'default' => "https://s-media-cache-ak0.pinimg.com/564x/1c/49/89/1c49890c41d42dbda547310728e4d35b.jpg",
+		'default' => "http://www.clipartkid.com/images/810/preemie-prints-information-blog-lemonade-charity-event-the-texas-thw9uo-clipart.png",
 		'type' => 'option',
 		'capability' => 'edit_theme_options',
 	));
@@ -418,7 +418,7 @@ function custom_featured_items_editor ($wp_customize) {
 
 	//What settings/options do you want to be editable?
 	$wp_customize->add_setting( 'fi_small_picture_two' , array ( 
-		'default' => "http://weknowmemes.com/wp-content/uploads/2012/07/support-bras.jpeg",
+		'default' => "http://www.clipartkid.com/images/810/preemie-prints-information-blog-lemonade-charity-event-the-texas-thw9uo-clipart.png",
 		'type' => 'option',
 		'capability' => 'edit_theme_options',
 	));
@@ -479,18 +479,18 @@ $fi_header = get_option( 'fi_header' , 'FEATURED ITEMS' );
 //Big Picture
 $fi_overlay_text_one = get_option( "fi_overlay_text_big_picture" , "SHOP" );
 $fi_big_pic = get_option("fi_big_picture","http://www.clipartkid.com/images/810/preemie-prints-information-blog-lemonade-charity-event-the-texas-thw9uo-clipart.png");
-$fi_big_pic_alt = get_option( "fi_big_picture_alt" , "Fresh Lemonade" );
-$fi_big_pic_destination = get_option("fi_big_picture_destination","http://localhost/wordpress/product/");
+$fi_big_pic_alt = "Fresh Lemonade";
+$fi_big_pic_destination = "http://localhost/wordpress/product/";
 //Small Picture Top
-$fi_overlay_text_two = get_option("fi_overlay_text_small_picture_one","SHOP");
-$fi_small_pic_one = get_option("fi_small_picture_one","https://s-media-cache-ak0.pinimg.com/564x/1c/49/89/1c49890c41d42dbda547310728e4d35b.jpg");
-$fi_small_pic_one_alt = get_option("fi_small_picture_one_alt","Pretty Unicorn of RAINBOWS");
-$fi_small_pic_one_destination = get_option("fi_small_picture_one_destination","http://localhost/wordpress/product/");
+$fi_overlay_text_two = "SHOP";
+$fi_small_pic_one = "http://www.clipartlord.com/wp-content/uploads/2014/05/unicorn4.png";
+$fi_small_pic_one_alt = "Pretty Unicorn of RAINBOWS";
+$fi_small_pic_one_destination = "http://localhost/wordpress/product/";
 //Small Picture Bottom
-$fi_overlay_text_three = get_option("fi_overlay_text_small_picture_two","SHOP");
-$fi_small_pic_two = get_option("fi_small_picture_two","http://weknowmemes.com/wp-content/uploads/2012/07/support-bras.jpeg");
-$fi_small_pic_two_alt = get_option("fi_small_picture_two_alt","Support Bras");
-$fi_small_pic_two_destination = get_option("fi_small_picture_two_destination","http://localhost/wordpress/product/");
+$fi_overlay_text_three = "SHOP";
+$fi_small_pic_two = "http://66.media.tumblr.com/tumblr_m7q7g3UcLt1qhlsrfo1_1280.jpg";
+$fi_small_pic_two_alt = "Support Bras";
+$fi_small_pic_two_destination = "http://localhost/wordpress/product/";
 
 ?>
 

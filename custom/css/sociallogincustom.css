@@ -1,0 +1,16 @@
+/*Custom CSS for the Social Login PLugin for La Boutique de Bonheur*/
+
+/*
+*Remove branding from OneAll Social login
+*/
+div.footer #branding {
+  display: none;
+}
+
+.oneall_social_login {
+	background-color: black !important;
+}
+
+.oneall_social_login_label {
+	background-color: yellow;
+}

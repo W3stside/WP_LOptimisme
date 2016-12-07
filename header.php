@@ -25,6 +25,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!--JQuery CDN Link for Color UI-->
 <script src="http://code.jquery.com/color/jquery.color.plus-names-2.1.2.js"></script>
+<!--Calling in custom JS/JQuery Page-->
+<script src="http://localhost/wordpress/wp-content/themes/estore-child/js/javascript.js"></script>
 
 <?php wp_head(); ?>
 </head>
@@ -38,6 +40,7 @@
 		
 		<header id="masthead" class="site-header" role="banner">
 		<?php if( get_theme_mod( 'estore_bar_activation' ) == '1' ) : ?>
+					
 			<div class="top-header-wrapper clearfix">
 				<div class="tg-container">
 					<div class="left-top-header">
@@ -66,16 +69,19 @@
 						if (class_exists('woocommerce')):
 						if(get_theme_mod('estore_header_ac_btn', '' ) == '1' ):
 						?>
+						
 						<div class="login-register-wrap right-header-block">
 							<?php if ( is_user_logged_in() ) { ?>
-									<a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') )); ?>" title="<?php esc_attr__('My Account','estore'); ?>" class="user-icon"><?php esc_html_e('My Account', 'estore'); ?></a>
+									<a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') )); ?>" title="<?php esc_attr__("Mon Compte","estore"); ?>" class="user-icon"><?php esc_html_e('Mon Compte', 'estore'); ?></a>
 								<?php }
 								else { ?>
-									<a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') )); ?>" title="<?php esc_attr__('Login/Register','estore'); ?>"class="user-icon"><?php esc_html_e('Login/ Register', 'estore'); ?><i class="fa fa-angle-down"> </i></a>
+									<a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') )); ?>" title="<?php esc_attr__("S'Inscrire/Se Connecter","estore"); ?>"class="user-icon"><?php esc_html_e("S'Inscrire/Se Connecter","estore"); ?><i class="fa fa-angle-down"> </i></a>
 								<?php } ?>
 								
 						</div>
-						<?php endif;
+						
+						<?php endif;?>
+						<?php
 						if(get_theme_mod('estore_header_currency', '' ) == '1' ):
 						?>
 						<div class="currency-wrap right-header-block">
@@ -136,7 +142,7 @@
 				<?php endif; ?>
 				  </div>
 			   </div><!-- logo-end-->
-
+			   
 			<div class="wishlist-cart-wrapper clearfix">
 				<?php
 				if (function_exists('YITH_WCWL')) {
@@ -148,9 +154,24 @@
 							<span class="wishlist-value"><?php echo absint( yith_wcwl_count_products() ); ?></span>
 						</a>
 					</div>
+					
 					<?php
 				}
+								
 				if ( class_exists( 'woocommerce' ) ) : ?>
+				
+				
+				<div class="login-register-wrap right-header-block">
+							<?php if ( is_user_logged_in() ) { ?>
+									<a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') )); ?>" title="<?php esc_attr__('Mon Compte','estore'); ?>" class="user-icon"><?php esc_html_e('Mon Compte', 'estore'); ?></a>
+								<?php }
+								else { ?>
+									<a href="<?php echo esc_url( get_permalink( get_option('woocommerce_myaccount_page_id') )); ?>" title="<?php esc_attr__("S'Inscrire/Se Connecter","estore"); ?>"class="user-icon"><?php esc_html_e("S'Inscrire/Se Connecter","estore"); ?><i class="fa fa-angle-down"> </i></a>
+								<?php } ?>
+								
+				</div>
+				
+				
 					<div class="cart-wrapper">
 						<div class="estore-cart-views">
 							<a href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" class="wcmenucart-contents">
@@ -218,7 +239,11 @@
 					</div>
 				</div> <!-- search-user-wrapper -->
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-				<div class="toggle-wrap"><span class="toggle"><i class="fa fa-reorder"> </i></span></div>
+					<div class="toggle-wrap">
+						<span class="toggle">
+							<i class="fa fa-reorder"> </i>
+						</span>
+					</div>
 					<?php wp_nav_menu(
 						array(
 							'theme_location' => 'primary',

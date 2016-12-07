@@ -694,7 +694,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*BootStrap columns*/
 
 .page-header {
-	display: none;
+	display: block;
 }
 
 /*////////////FROM ADVANCED CSS (CUSTOMIZER) CSS///////////*/
@@ -702,6 +702,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 #masthead {
   background-color: white;
+  margin-top: -24px;
  }
 
 .site-title-wrapper {
@@ -715,14 +716,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 #site-title a {
   color: black;
   font-weight: 700;
-  font-size: 50px; 
+  font-size: 20px; /*was 50px*/
   line-height: 1.73;
   margin-left: 25px;
 }
 
 .middle-header-wrapper {
    background-color: #fff568;
-   border-top: 3px solid black; 
+   /*border-top: 3px solid black;*/
    padding: 0; 
   }
 
@@ -731,8 +732,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   }
 
 .bottom-header-wrapper {
-  border-top: 1px solid black !important;
-  border-bottom: 3px solid black !important;
+  border-top: 0px solid transparent !important;
+  border-bottom: 0px solid transparent !important;
   }
   
 .user-wrapper.search-user-block {
@@ -743,16 +744,44 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .search-user-block {
   border-left: 1px solid black !important;
 }
+
+.wishlist-cart-wrapper .right-header-block {
+  background-color: black !important;
+  margin-top: 3px;
+}
+
+.wishlist-cart-wrapper .right-header-block a {
+  border-right: 0px solid transparent;
+  color: white;
+}
+
+.wishlist-cart-wrapper .right-header-block:hover a {
+  background-color: white !important;
+  color: black;
+  font-weight: bold;
+  padding: 0 15px;
+  text-decoration: underline;
+}
+
+.widget-title { /*search block Title: "Search Products" */
+  border-bottom: none;
+  margin-bottom: 5px !important;
+}
+
+.widget-title span {
+  padding-bottom: 2px;
+}
+
 /*
 .wcmenucart-contents {
   display: table;
 }
-
+*/
 .searchsubmit i {
   transform: translate(-7%, -14%);
 }
 
-.fa {
+div.cartwrapper.estore-cart-views a i {
   display: table-cell !important;
   font-size: 20px !important;
   vertical-align: middle;
@@ -774,36 +803,86 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 .custom-logo-link img {
-  width: 270px !important;
+  width: 120px !important; /*was 270px*/
+}
+
+.menu-item {
+  position: static !important;
+}
+
+/*Drop Down menus*/
+
+.menu-main-menu-middle-container li a {
+  overflow: hidden;
+}
+
+.expandable-dropdown-menus-wrapper {
+  position: absolute;
+  width: 100%; 
+  left: 0; 
+  right: 0;
+  top: 42px;
+  background-color: white;
+  height: 300px;
+  overflow: hidden;
+  z-index: 4;
+
+  -webkit-transition: height 500ms ease-in-out;
+     -moz-transition: height 500ms ease-in-out;
+       -o-transition: height 500ms ease-in-out;
+          transition: height 500ms ease-in-out;
+}
+
+.expandable-dropdown-menus {
+  max-width: 1200px;
+  margin: 0 auto !important;
+}
+
+/*End of Drop Down Menus*/
+
+.featured-items-entire-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .front-page-picture {
   display: block;
   margin: 0 auto;
+  overflow: hidden;
   position: relative;
   text-align: center;
-  width: 100%;
+  width: 100%; height: 600px !important;
 }
 
 .front-page-h1-wrapper {
   display: table;
   left: 50%; top: 50%;
   position: absolute;
-  transform: translate(-50%, -50%); /* Yep! */
+  -webkit-transform: translate(-50%, -56%); /* Yep! */
+     -moz-transform: translate(-50%, -56%); /* Yep! */
+       -o-transform: translate(-50%, -56%); /* Yep! */
+          transform: translate(-50%, -56%); /* Yep! */
   width: 87%; /* Was 48% */ height: 59%;
+  z-index: 2;
 }
 
 .front-page-picture img {
+   position: static;
    width: 100% !important; 
+   z-index: -1;
+   -webkit-transform: translate(0, -23%);
+      -moz-transform: translate(0, -23%);
+        -o-transform: translate(0, -23%);
+           transform: translate(0, -23%);
 }
 
 .front-page-picture h1 {
-    color: white;
+    color: ghostwhite;
     display: table-cell;
     font-size: 8em;
-    /*margin: 11% auto 0 auto;*/
-    /*position: absolute;*/
     text-align: center;
+    text-shadow: 0px -6px 12px darkgrey;
     vertical-align: middle;
     width: 100%;
 }
@@ -973,6 +1052,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .wpcs_product_carousel_slider .another_carousel_header i.fa-angle-right:hover, .wpcs_product_carousel_slider .another_carousel_header i.fa-angle-left:hover {
   background-color: #fff568 !important;
   color: black !important;
+}
+
+.low-inventory-tag {
+  background-color: orange;
+  display: inline-block;
+  top: 0; left: 0; right: 0;
+  padding: 2px 20px;
+  position: absolute;
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 99;
 }
 
 /*// MEDIA QUERIES // */
