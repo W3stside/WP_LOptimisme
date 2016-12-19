@@ -46,7 +46,8 @@
 					<div class="left-top-header">
 						<div id="header-ticker" class="left-header-block">
 							<?php //do_action('facebook_login_button');?>
-							<?php //do_action('facebook_disconnect_button');?>
+							
+
 							<?php
 							$header_bar_text = get_theme_mod( 'estore_bar_text' );
 							echo wp_kses_post($header_bar_text);
@@ -149,7 +150,7 @@
 					$wishlist_url = YITH_WCWL()->get_wishlist_url();
 					?>
 					<div class="wishlist-wrapper">
-						<a class="quick-wishlist" href="<?php echo esc_url($wishlist_url); ?>" title="Wishlist">
+						<a class="quick-wishlist" href="<?php echo 'http://localhost/wordpress/wishlist/'//esc_url($wishlist_url); ?>" title="Wishlist">
 							<i class="fa fa-heart"></i>
 							<span class="wishlist-value"><?php echo absint( yith_wcwl_count_products() ); ?></span>
 						</a>
@@ -208,6 +209,7 @@
 						<?php echo esc_html($menu_name); ?><i class="fa fa-navicon"> </i>
 					</div>
 					<nav id="category-navigation" class="category-menu-wrapper hide" role="navigation">
+
 						<?php wp_nav_menu(
 							array(
 								'theme_location' => 'secondary',
@@ -216,6 +218,7 @@
 							)
 						);
 						?>
+
 					</nav>
 				</div>
 				<?php } ?>
@@ -244,13 +247,25 @@
 							<i class="fa fa-reorder"> </i>
 						</span>
 					</div>
-					<?php wp_nav_menu(
+					<?php /*wp_nav_menu(
 						array(
 							'theme_location' => 'primary',
 							'menu_id'        => 'primary-menu',
 						)
+					);*/
+					?>
+
+					<?php
+					wp_nav_menu (
+						array (
+							'theme_location' => 'primary',
+							'menu_id'		 => 'primary-menu',
+							'walker'         => new New_Walker_Nav_Menu,
+							'before' => '<div class="expandable_dropdown_menus_wrapper"></div>'	
+						)
 					);
 					?>
+
 			   </nav><!-- #site-navigation -->
 
 			</div>

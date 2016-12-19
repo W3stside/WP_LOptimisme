@@ -59,7 +59,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -787,6 +787,9 @@ div.cartwrapper.estore-cart-views a i {
   vertical-align: middle;
 }
 
+.wishlist-wrapper {
+  margin-right: 57px;
+}
 
 .search-user-block a, .search-user-block .search-icon {
   padding: 11.3px 15px !important;
@@ -806,6 +809,14 @@ div.cartwrapper.estore-cart-views a i {
   width: 120px !important; /*was 270px*/
 }
 
+#site-navigation .menu-item {
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 43px;
+    margin-left: 38px;
+}    
+
 .menu-item {
   position: static !important;
 }
@@ -816,14 +827,14 @@ div.cartwrapper.estore-cart-views a i {
   overflow: hidden;
 }
 
-.expandable-dropdown-menus-wrapper {
+.expandable_dropdown_menus_wrapper {
   position: absolute;
   width: 100%; 
   left: 0; 
   right: 0;
   top: 42px;
   background-color: white;
-  height: 300px;
+  height: 0;
   overflow: hidden;
   z-index: 4;
 
@@ -838,7 +849,31 @@ div.cartwrapper.estore-cart-views a i {
   margin: 0 auto !important;
 }
 
-/*End of Drop Down Menus*/
+  /*//////////////////////*/
+ /*End of Drop Down Menus*/
+/*//////////////////////*/
+
+
+
+  /*///////////////////*/
+ /*Front page greeting*/
+/*///////////////////*/
+
+#fp_greeting {
+  margin: 0;
+  padding: 5px 0;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  text-align: center;
+}
+
+#fp_greeting strong {
+  color: #ff8;
+}
+
+  /*///////////////////*/
+ /*Front page picture */
+/*///////////////////*/
 
 .featured-items-entire-wrapper {
   position: relative;
@@ -855,6 +890,13 @@ div.cartwrapper.estore-cart-views a i {
   width: 100%; height: 600px !important;
 }
 
+.front-page-picture img {
+  -webkit-filter: blur(2px);
+     -moz-filter: blur(2px);
+       -o-filter: blur(2px);
+          filter: blur(2px);
+}
+
 .front-page-h1-wrapper {
   display: table;
   left: 50%; top: 50%;
@@ -867,7 +909,7 @@ div.cartwrapper.estore-cart-views a i {
   z-index: 2;
 }
 
-.front-page-picture img {
+#fp_pic_large {
    position: static;
    width: 100% !important; 
    z-index: -1;
@@ -877,14 +919,29 @@ div.cartwrapper.estore-cart-views a i {
            transform: translate(0, -23%);
 }
 
+#fp_pic_overlay {
+  background-color: rgba(0,0,0,0.7);
+  position: static;
+  width: 100%; height: auto;
+  z-index: 2;
+}
+
 .front-page-picture h1 {
-    color: ghostwhite;
     display: table-cell;
     font-size: 8em;
     text-align: center;
-    text-shadow: 0px -6px 12px darkgrey;
     vertical-align: middle;
     width: 100%;
+}
+
+.front-page-picture h1 a, #fp_greeting {
+  color: ghostwhite;
+  text-shadow: 0px -6px 12px darkgrey;
+}
+
+/*#fp_pic_overlay:hover #fp_pic_large {
+  opacity: 0.7 !important;
+  filter: blur(4px);
 }
 
 #primary {
@@ -892,7 +949,32 @@ div.cartwrapper.estore-cart-views a i {
 	margin: 0 auto;
 	text-align: center;
 	width: 90%;
+}*/
+
+/*The front page one - just after the SHOP header*/
+
+#main div.tg-container { 
+  width: 95%;
 }
+
+#main div.tg-container #primary {
+  width: 100%;
+}
+
+.yit-wcan-container {
+  width: 75% !important;
+}
+
+.yit-wcan-container ul.products {
+  float: left;
+  width: 100%;
+}
+
+#secondary {
+  padding-left: 15px;
+  width: 25%;
+}
+
 
 /*////////////FROM ADVANCED CSS (CUSTOMIZER) CSS///////////*/
 /*////////////FROM ADVANCED CSS (CUSTOMIZER) CSS///////////*/
@@ -1002,6 +1084,86 @@ div.cartwrapper.estore-cart-views a i {
 
 /* // CUSTOM CAROUSEL SLIDER // */
 
+/* // MY ACCOUNT PAGE // */
+/* // MY ACCOUNT PAGE // */
+/* // MY ACCOUNT PAGE // */
+
+.round-box {
+  border: 1px solid #ff8;
+  border-radius: 30px;
+  box-shadow: 0 0 15px black;
+  margin: 8px 0;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.top-block {
+  text-align: center;
+}
+
+.top-block h3 {
+  font: 6em 'Amatic SC';
+  letter-spacing: 2px;
+}
+
+.myaccount-button {
+  margin-right: 17px;
+
+  appearance: button;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 15px 35px;
+}
+
+.myaccount-button:hover {
+  color: black;
+  background-color: #ff8;
+  font-weight: 900;
+}
+
+.woocommerce .wishlist_table td.product-add-to-cart a {
+    height: auto;
+    width: 140px;
+}
+
+.woocommerce-MyAccount-navigation ul {
+  color: black;
+  font-weight: 600; font-family: 'Amatic SC', Arial; font-size: 3em;
+  list-style-type: lower-roman;
+  padding-left: 1em;
+  text-align: left;
+}
+
+.woocommerce-MyAccount-navigation ul li {
+  -webkit-transition: all 0.35s ease-in-out;
+     -moz-transition: all 0.35s ease-in-out;
+       -o-transition: all 0.35s ease-in-out;
+          transition: all 0.35s ease-in-out;
+}
+
+.woocommerce-MyAccount-navigation ul li:hover {
+  -webkit-transform: translate(25px,0);
+     -moz-transform: translate(25px,0);
+       -o-transform: translate(25px,0);
+          transform: translate(25px,0);
+}
+
+.woocommerce-Address-title {
+  font-size: 3em !important;
+  font-weight: 900 !important;
+  letter-spacing: -2px !important;
+  text-align: center !important;
+}  
+
+.woocommerce-MyAccount-content {
+  color: black;
+}
+
+.woocommerce-account .addresses .title h3, .woocommerce-account .addresses .title a {
+  float: none !important;
+}
+
 /*// WOOCOMMERCE PRODUCTS PAGE //*/
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   box-shadow: 0px 10px 38px -2px #8c8c8c;
@@ -1025,7 +1187,7 @@ div.cartwrapper.estore-cart-views a i {
 
 .owl-wrapper-outer {
   margin: 0 auto;
-  width: 100% !important; /* For 3 Product Slider */
+  width: 90% !important; /* For 3 Product Slider */
 }
 
 .owl-wrapper {
@@ -1064,6 +1226,54 @@ div.cartwrapper.estore-cart-views a i {
   text-transform: uppercase;
   z-index: 99;
 }
+
+/*FRONT PAGE SHOP SECTION*/
+#secondary {
+  padding-left: 0px;
+  width: 22%;
+  border: 2px solid black;
+  margin: 0px;
+}
+
+#secondary section {
+  margin: 30px;
+  border-bottom: 2px solid black;
+  padding: 0 0 35px 0;
+}
+
+#secondary section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}    
+
+/*YITH WISHLIST*/
+.yith-wcwl-share {
+  margin-bottom: 18px !important;
+}
+
+/*ILS PARLENT DE NOUS SECTION*/
+.news_about_us {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.news_about_us_wrapper {
+  padding: 15px;
+}
+
+#nau_row {
+  padding-bottom: 30px;
+}
+
+.nau_image {
+  transition: all 0.5s ease-in-out;
+}
+
+.nau_image:hover {
+  filter: grayscale(90%);
+  transform: translate(0 , 5%);
+}
+
 
 /*// MEDIA QUERIES // */
 /*// MEDIA QUERIES // */
