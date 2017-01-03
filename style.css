@@ -28,6 +28,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   margin-right: auto;
   margin-left: auto;
 }
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -871,6 +877,32 @@ div.cartwrapper.estore-cart-views a i {
   color: #ff8;
 }
 
+/*////////////////////*/
+/*////Hover Menus////*/
+/*//////////////////*/
+#mega-menu-wrap-primary {
+  background-color: white;
+}
+
+.mega-sub-menu {
+  display: inline-table !important;
+  position: absolute !important; 
+  top: 30px !important;
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link .mega-description-group .mega-menu-title {
+  line-height: 40px !important;
+  height: 0 !important;
+}
+
+.mega-menu-link {
+  color: black !important;
+}
+
+.mega-menu-description {
+  display: none !important;
+}
+
   /*///////////////////*/
  /*Front page picture */
 /*///////////////////*/
@@ -1087,6 +1119,13 @@ div.cartwrapper.estore-cart-views a i {
 /* // MY ACCOUNT PAGE // */
 /* // MY ACCOUNT PAGE // */
 /* // MY ACCOUNT PAGE // */
+.myaccount-title { /*My Account Header*/
+  font-size: 4.5em !important;
+}
+
+.makeRed {
+  background-color: red;
+}
 
 .round-box {
   border: 1px solid #ff8;

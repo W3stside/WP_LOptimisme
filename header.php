@@ -247,21 +247,10 @@
 							<i class="fa fa-reorder"> </i>
 						</span>
 					</div>
-					<?php /*wp_nav_menu(
+					<?php wp_nav_menu(
 						array(
 							'theme_location' => 'primary',
 							'menu_id'        => 'primary-menu',
-						)
-					);*/
-					?>
-
-					<?php
-					wp_nav_menu (
-						array (
-							'theme_location' => 'primary',
-							'menu_id'		 => 'primary-menu',
-							'walker'         => new New_Walker_Nav_Menu,
-							'before' => '<div class="expandable_dropdown_menus_wrapper"></div>'	
 						)
 					);
 					?>
