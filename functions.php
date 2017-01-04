@@ -81,6 +81,6 @@ include 'includes/my-account-customization.php';
 
 <?php
 //Extend Walker Nav
-include 'includes/walker_nav_menu_extension.php';
+//include 'includes/walker_nav_menu_extension.php';
 ?>
 
